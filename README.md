@@ -1,4 +1,4 @@
-# IFTT maker channel IP presence
+# IFTTT maker channel IP presence
 
 Given an IP address it will ping at 1 second intervals and trigger an IFTT event if the device becomes available
 I'm using this to detect my [Amazon dash buttons](https://www.amazon.com/Dash-Buttons/b?&node=10667898011), but you can use for phone/watch/[bathroom scales](https://www.withings.com/us/en/products/body) detection in the same way.
@@ -14,7 +14,7 @@ docker run --restart-always -d \
   -e DEVICE_button121=192.168.0.121 \
   -e DEVICE_button120=192.168.0.120 \
   -e DEVICE_weighin=192.168.0.122 \
-  chrisns/iftt-presence
+  chrisns/ifttt-ip-presence
 ```
 
 In this example I'm waiting for two dash buttons on `192.168.0.121` and `192.168.0.120` and I will fire the trigger `button121` and `button120` that I setup in IFTT.
